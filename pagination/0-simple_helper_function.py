@@ -3,7 +3,9 @@
 Module for simple helper functions.
 """
 
-def index_range(page: int, page_size: int) -> tuple[int, int]:
+from typing import Tuple
+
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """
     Return a tuple of start and end indexes for pagination.
 
@@ -12,7 +14,7 @@ def index_range(page: int, page_size: int) -> tuple[int, int]:
         page_size (int): The number of items per page.
 
     Returns:
-        tuple[int, int]: A tuple containing the start and end indexes.
+        Tuple[int, int]: A tuple containing the start and end indexes.
 
     Raises:
         ValueError: If page or page_size is less than 1.
