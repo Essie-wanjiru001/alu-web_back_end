@@ -3,7 +3,6 @@
 Module for simple helper functions.
 """
 
-
 from typing import Tuple
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
@@ -20,6 +19,7 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
     Raises:
         ValueError: If page or page_size is less than 1.
     """
+
 
     if page < 1 or page_size < 1:
         raise ValueError("Page and page_size must be greater than or equal to 1.")
