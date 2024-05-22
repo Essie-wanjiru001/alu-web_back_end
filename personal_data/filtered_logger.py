@@ -12,12 +12,10 @@ from mysql.connector import Error
 PII_FIELDS = ("name", "email", "phone", "ssn", "password")
 
 
-def filter_datum(fields: List[str], redaction: str,
-                 message: str, separator: str) -> str:
+def filter_datum(fields: List[str], redaction: str, message: str, separator: str) -> str:
     """Returns a log message obfuscated."""
     for field in fields:
-        message = re.sub(f'{field}=.*?{separator}',
-                         f'{field}={redaction}{separator}', message)
+        message = re.sub(f'{field}=.*?{separator}', f'{field}={redaction}{separator}', message)
     return message
 
 
@@ -72,7 +70,9 @@ def main():
         logger = get_logger()
 
         for row in cursor:
-            str_row = ''.join(f'{field}={str(value)}; ' for value, field in zip(row, field_names))
+            str_row = ''.join(
+                f'{field}={str(value)}; ' for value, field in zip(row, field_names)
+            )
             logger.info(str_row.strip())
 
         cursor.close()
@@ -94,8 +94,7 @@ class RedactingFormatter(logging.Formatter):
 
     def format(self, record: logging.LogRecord) -> str:
         """Filters values in incoming log records using filter_datum."""
-        record.msg = filter_datum(self.fields, self.REDACTION,
-                                  record.getMessage(), self.SEPARATOR)
+        record.msg = filter_datum(self.fields, self.REDACTION, record.getMessage(), self.SEPARATOR)
         return super(RedactingFormatter, self).format(record)
 
 
