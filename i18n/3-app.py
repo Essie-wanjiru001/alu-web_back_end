@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-''' Basic Flask app and Babel setup
+''' Flask application with Babel
 Parameterize templates '''
 
 from flask import Flask, render_template, request
@@ -16,8 +16,7 @@ class Config:
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
-app.config.from_object('3-app.Config')
-
+app.config.from_object(Config)
 
 @babel.localeselector
 def get_locale() -> str:
