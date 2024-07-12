@@ -3,6 +3,7 @@ module.exports = {
       browser: false,
       es6: true,
       jest: true,
+      node: true,
     },
     extends: [
       'airbnb-base',
@@ -33,3 +34,5 @@ module.exports = {
       }
     ]
   };
+
+  console.log('Loaded ESLint configuration');  
