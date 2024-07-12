@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint": "eslint",
+    "lint": "eslint . --fix",
     "check-lint": "eslint [0-9]*.js",
     "dev": "npx babel-node",
     "test": "jest",
