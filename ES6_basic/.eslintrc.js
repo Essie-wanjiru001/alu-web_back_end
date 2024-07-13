@@ -41,7 +41,7 @@ module.exports = {
 
       rules: {
         'jest/require-hook': 'off',
-        'new-cap': ['error', { newIsCap: true }], 
+        'new-cap': ['error', { newIsCap: true }],
       },
     },
   ],
