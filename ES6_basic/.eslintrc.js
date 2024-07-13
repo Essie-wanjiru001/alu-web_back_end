@@ -35,9 +35,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*-main.js'],
+      files: ['*.js'],
+      excludedFiles: 'babel.config.js',
+
       rules: {
         'jest/require-hook': 'off',
+        'new-cap': ['error', { newIsCap: true }], 
       },
     },
   ],
