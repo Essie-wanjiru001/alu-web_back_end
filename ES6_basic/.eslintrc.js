@@ -20,11 +20,7 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
-    'import/extensions': ['error', 'ignorePackages', {
-      js: 'never',
-      mjs: 'never',
-      jsx: 'never',
-    }],
+    'import/extensions': 'off',
     'quotes': ['error', 'single'],
     'comma-dangle': ['error', 'always-multiline'],
     'array-bracket-spacing': ['error', 'never'],
