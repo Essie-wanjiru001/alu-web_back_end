@@ -1,1 +1,1 @@
-Readme file for this project
+readme file for ES6 project
