@@ -27,11 +27,18 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
+    'import/extensions': ['error', 'never', {
+      js: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
+    }],
+    'jest/require-hook': 'off', // Disable if you prefer not to use hooks in jest
   },
-  overrides:[
+  overrides: [
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
-    }
-  ]
+    },
+  ],
 };
