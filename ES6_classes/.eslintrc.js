@@ -33,6 +33,7 @@ module.exports = {
       ts: 'never',
       tsx: 'never',
     }],
+    'jest/detectJestVersion': 'off',
   },
   overrides: [
     {
