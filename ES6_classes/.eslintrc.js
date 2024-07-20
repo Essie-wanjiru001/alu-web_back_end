@@ -34,6 +34,7 @@ module.exports = {
       tsx: 'never',
     }],
     'jest/require-hook': 'off', // Disable if you prefer not to use hooks in jest
+    'jest/detectJestVersion': 'off',
   },
   overrides: [
     {
