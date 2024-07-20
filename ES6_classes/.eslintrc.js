@@ -39,6 +39,15 @@ module.exports = {
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
+      rules: {
+        'jest/require-hook': 'off',
+      },
+    },
+    {
+      files: ['*.test.js', '*.spec.js'],
+      rules: {
+        'jest/require-hook': 'error',
+      },
     },
   ],
 };
