@@ -33,6 +33,9 @@ module.exports = {
       ts: 'never',
       tsx: 'never',
     }],
+    'jest/require-hook': 'off',
+    'jest/no-conditional-expect': 'off',
+
   },
   overrides: [
     {
